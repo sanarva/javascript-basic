@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exercices related to JavaScript">
+    <title>JS - Exercices</title>
+</head>
+
+
+<body>
+
+    <script>
+        // EXERCICE 1: L'exercici consisteix a crear un fitxer anomenat ciber.html i mostrar per consola un 'Hola mundo'
+
+        console.log("Hola mundo");
+
+        // EXERCICE 2: Crea un alert que mostri el teu nom
+
+        alert("¡Me llamo Sandra!");
+
+        // EXERCICE 3: Crea una variable que contingui el teu nom i un altre que contingui el teu cognom.
+
+        let myName = "Sandra";
+        let mySurname = "Arcas";
+
+        console.log(myName + " " + mySurname);
+
+
+        // EXERCICE 4: Crea dos variables amb dos números i fes una suma entre ells.
+
+        let firstNumber = 34;
+        let secondNumber = 25;
+
+        console.log("La suma de " + firstNumber + " y " + secondNumber + " es: " + (firstNumber + secondNumber));
+
+
+        // EXERCICE 5: Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat aprovat o no juntament amb la nota.
+        let grade = 4.5;
+
+        if (grade < 5) {
+            alert("¡Oh, has suspendido el examen con un " + grade + "!");
+        }
+
+        // EXERCICE 6: Reemplaça la paraula blau per la paraula verd del següent text Tinc un cotxe de color blau. Després intenta fer-ho remplaçant les o per les u
+
+        let sentence = "Tinc un cotxe de color blau";
+
+        sentence = sentence.replace("blau", "verd");
+        console.log(sentence);
+
+        sentence = sentence.replace(/o/gi, "u");
+        console.log(sentence);
+
+
+        // EXERCICE 7: Donat el seguit llistat d’objectes ‘taula’, ‘cadira’, ‘ordinador’, ‘libreta’, per un bucle que mostri per pantalla cada objecte i la save posició al llistat.
+
+        const OBJECTARRAY = ["taula", "cadira", "ordinador", "libreta"];
+        let i = 0;
+
+        for (i; i < OBJECTARRAY.length; i++) {
+            console.log("L'objecte " + OBJECTARRAY[i] + " està a la posició " + i + ".");
+        }
+
+        // EXERCICE 8: Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1 i valor2. Estructura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar per pantalla.
+
+        let operador = prompt("Please, enter the opration \r Addition \r Subtraction \r Multiplication:").toLowerCase();
+        let valor1 = parseInt(prompt("Please, enter the firt number:"));
+        let valor2 = parseInt(prompt("Please, enter the second number:"));
+
+        function calculadora(operador, valor1, valor2) {
+
+            switch (operador) {
+                case "addition":
+                    result = valor1 + valor2;
+                    break;
+                case "subtraction":
+                    result = valor1 - valor2;
+                    break;
+                case "multiplication":
+                    result = valor1 * valor2;
+                    break;
+                default:
+                    result = "Error: this operator is not allowed";
+            }
+            console.log("The result of your operation is: " + result);
+        }
+
+        calculadora(operador, valor1, valor2);
+    </script>
+</body></html>
